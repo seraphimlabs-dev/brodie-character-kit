@@ -1,0 +1,10 @@
+# Brodie character kit
+
+> Mascot kit for Brodie, a chibi gym-buddy character. Body colour #EFE7DA (cream, never pink). Black BRODIE tank top. Flat sticker style.
+
+- [Spec (JSON)](https://raw.githubusercontent.com/seraphimlabs-dev/brodie-character-kit/main/brodie.json): colours, locked traits, costume slots, canon image prompt, QA thresholds
+- [Agent instructions](https://raw.githubusercontent.com/seraphimlabs-dev/brodie-character-kit/main/AGENTS.md)
+- [Reference: flex](https://raw.githubusercontent.com/seraphimlabs-dev/brodie-character-kit/main/reference/brodie-flex.png)
+- [Reference: sit and wave](https://raw.githubusercontent.com/seraphimlabs-dev/brodie-character-kit/main/reference/brodie-sit-wave.png)
+- [Profile picture](https://raw.githubusercontent.com/seraphimlabs-dev/brodie-character-kit/main/pfp/brodie-pfp.png)
+- [Colour checker](https://raw.githubusercontent.com/seraphimlabs-dev/brodie-character-kit/main/tools/check_cream.py)
