@@ -4,7 +4,7 @@ Everything a builder or an agent needs to draw **Brodie** for a new skill (a che
 hat for a macros coach, a nightcap for sleep, a sweatband for cardio) and still have
 him look like Brodie.
 
-- **Kit page:** https://seraphimlabs-dev.github.io/brodie-character-kit/
+- **Kit page:** https://brodie-character-kit.vercel.app/
 - **Machine-readable spec:** [`brodie.json`](brodie.json) (colours, locked traits, prompt, QA thresholds, file URLs)
 - **For coding agents:** [`AGENTS.md`](AGENTS.md) · Claude skill: [`skill/brodie-character/SKILL.md`](skill/brodie-character/SKILL.md)
 
