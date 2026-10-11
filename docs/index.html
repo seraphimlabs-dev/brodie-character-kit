@@ -1,37 +1,42 @@
+<meta charset="utf-8">
 <title>Brodie Character Kit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: a sticker sheet. Brodie die-cut stickers on the app's ink ground; each section is one rule of the character, shown before it is explained. Single dark look, matching the app and the tee. */
 :root {
   --ink: #1A1919;          /* garment, tank, outline */
   --ink-2: #242222;        /* raised surface */
-  --line: #353231;
+  --line: rgba(255,255,255,.12);
+  --bg: #0A0A0B;           /* getbrodie.com ground */
+  --panel: #1F2126;        /* getbrodie.com panels */
+  --panel-2: #141518;      /* code wells */
+  --volt: #D9FF3D;         /* getbrodie.com accent, black ink on it */
   --cream: #EFE7DA;        /* Brodie's body. canon. */
   --tan: #C2A882;          /* accent: speed marks, rules */
   --pink: #F1E4D8;         /* the drift we reject */
-  --fg: #EFE7DA;
-  --muted: #A29C93;
+  --fg: #F2F2F3;
+  --muted: #8E9198;
   --bad: #E0705F;
   --good: #9FC27A;
-  --display: "Outfit", "Arial Rounded MT Bold", system-ui, sans-serif;
-  --body: "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --display: "Archivo", system-ui, sans-serif;
+  --body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
 img { height: auto; }
-body { background: var(--ink); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
 .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 80px; display: flex; flex-direction: column; gap: 72px; }
 h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.02em; }
 h2 { font-size: clamp(26px, 3.6vw, 36px); font-weight: 800; }
 h3 { font-size: 19px; font-weight: 700; }
 p { margin: 0; max-width: 64ch; }
-.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tan); }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--volt); }
 .muted { color: var(--muted); }
 code, .mono { font-family: var(--mono); font-size: 0.88em; }
-code { background: var(--ink-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; }
+code { background: var(--panel); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; }
 section { display: flex; flex-direction: column; gap: 22px; }
 .sec-head { display: flex; flex-direction: column; gap: 8px; }
 
@@ -41,7 +46,7 @@ section { display: flex; flex-direction: column; gap: 22px; }
 /* hero */
 .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; }
 .hero h1 { font-size: clamp(54px, 9vw, 108px); font-weight: 900; line-height: 0.88; letter-spacing: -0.045em; }
-.hero h1 span { display: block; color: var(--tan); font-weight: 700; font-size: 0.42em; letter-spacing: -0.02em; margin-top: 10px; }
+.hero h1 span { display: block; color: var(--volt); font-weight: 700; font-size: 0.42em; letter-spacing: -0.02em; margin-top: 10px; }
 .hero-copy { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
 .hero-copy p { font-size: 18px; color: var(--muted); }
 .hero-copy p b { color: var(--fg); font-weight: 600; }
@@ -55,7 +60,7 @@ section { display: flex; flex-direction: column; gap: 22px; }
 
 /* colour */
 .swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; }
-.sw { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--ink-2); display: flex; flex-direction: column; }
+.sw { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); display: flex; flex-direction: column; }
 .sw .chip { height: 118px; display: flex; align-items: flex-end; padding: 12px; }
 .sw .meta { padding: 14px; display: flex; flex-direction: column; gap: 4px; }
 .sw .hex { font-family: var(--mono); font-size: 15px; font-weight: 500; }
@@ -79,11 +84,11 @@ section { display: flex; flex-direction: column; gap: 22px; }
 figcaption { font-family: var(--mono); font-size: 12px; color: var(--muted); text-align: center; }
 .traits { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid var(--line); min-width: 0; }
 .traits li { display: grid; grid-template-columns: 112px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
-.traits b { font-family: var(--display); font-weight: 700; color: var(--tan); font-size: 15px; }
+.traits b { font-family: var(--display); font-weight: 700; color: var(--volt); font-size: 15px; }
 
 /* rules */
 .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.rule { background: var(--ink-2); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.rule { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
 .rule ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; font-size: 15px; color: var(--muted); }
 .rule ul b { color: var(--fg); font-weight: 600; }
 .rule.lock h3::before { content: "Locked"; }
@@ -93,22 +98,22 @@ figcaption { font-family: var(--mono); font-size: 12px; color: var(--muted); tex
 .rule.free h3::before { color: var(--good); }
 
 /* prompt */
-.prompt { background: #111010; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.prompt { background: var(--panel-2); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
 .prompt-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
 .prompt-bar span { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .prompt pre { margin: 0; padding: 18px; font-family: var(--mono); font-size: 13.5px; line-height: 1.6; white-space: pre-wrap; word-break: break-word; color: var(--fg); max-height: 420px; overflow: auto; }
-.prompt pre .slot { color: var(--ink); background: var(--tan); border-radius: 4px; padding: 0 4px; }
-button.copy { font: 600 13px var(--body); background: var(--cream); color: var(--ink); border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+.prompt pre .slot { color: var(--bg); background: var(--volt); border-radius: 4px; padding: 0 4px; }
+button.copy { font: 700 13px var(--body); background: var(--volt); color: var(--bg); border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer; }
 button.copy:hover { background: #fff; }
-button.copy:focus-visible { outline: 2px solid var(--tan); outline-offset: 2px; }
+button.copy:focus-visible { outline: 2px solid var(--volt); outline-offset: 2px; }
 .steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; max-width: 72ch; }
 
 /* gallery */
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.card { background: var(--ink-2); border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
 .card .art { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; max-width: 100%; }
 .card .art img { max-height: 100%; width: auto; max-width: 100%; }
-.card .skill { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--tan); }
+.card .skill { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--volt); }
 .card .costume { font-size: 14.5px; color: var(--muted); }
 .qa { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 12px; padding: 3px 9px; border-radius: 999px; border: 1px solid; align-self: flex-start; }
 .qa.pass { color: var(--good); border-color: color-mix(in srgb, var(--good) 50%, transparent); }
@@ -119,12 +124,12 @@ button.copy:focus-visible { outline: 2px solid var(--tan); outline-offset: 2px; 
 .ideas span b { color: var(--fg); font-weight: 600; }
 
 .donts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.dont { border: 1px solid color-mix(in srgb, var(--bad) 40%, var(--line)); border-radius: 18px; padding: 20px; display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center; background: var(--ink-2); }
+.dont { border: 1px solid color-mix(in srgb, var(--bad) 40%, var(--line)); border-radius: 18px; padding: 20px; display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center; background: var(--panel); }
 .dont img { width: 100%; }
 .dont div { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 
 /* QA */
-.cli { background: #111010; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; font-family: var(--mono); font-size: 13px; line-height: 1.7; overflow-x: auto; white-space: pre; color: var(--fg); }
+.cli { background: var(--panel-2); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; font-family: var(--mono); font-size: 13px; line-height: 1.7; overflow-x: auto; white-space: pre; color: var(--fg); }
 .cli .c { color: var(--muted); }
 .cli .p { color: var(--good); } .cli .f { color: var(--bad); }
 .limits { overflow-x: auto; }
@@ -135,14 +140,14 @@ td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-spa
 
 /* get the kit */
 .get { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; }
-.get-card { background: var(--ink-2); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.get-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 .get-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-a { color: var(--cream); text-decoration-color: var(--tan); text-underline-offset: 3px; }
+a { color: var(--fg); text-decoration-color: var(--volt); text-underline-offset: 3px; }
 a:hover { color: #fff; }
-a:focus-visible { outline: 2px solid var(--tan); outline-offset: 2px; border-radius: 3px; }
-.btn { display: inline-flex; align-self: flex-start; font: 600 14px var(--body); background: var(--cream); color: var(--ink); text-decoration: none; border-radius: 999px; padding: 9px 16px; }
-.btn:hover { background: #fff; color: var(--ink); }
-.agent-cmd { background: #111010; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; font-family: var(--mono); font-size: 12.5px; line-height: 1.6; overflow-x: auto; white-space: pre; }
+a:focus-visible { outline: 2px solid var(--volt); outline-offset: 2px; border-radius: 3px; }
+.btn { display: inline-flex; align-self: flex-start; font: 700 14px var(--body); background: var(--volt); color: var(--bg); text-decoration: none; border-radius: 999px; padding: 9px 16px; }
+.btn:hover { background: #E6FF73; color: var(--bg); }
+.agent-cmd { background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; font-family: var(--mono); font-size: 12.5px; line-height: 1.6; overflow-x: auto; white-space: pre; }
 footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 20px; }
 
 @media (max-width: 820px) {
@@ -216,6 +221,17 @@ https://raw.githubusercontent.com/seraphimlabs-dev/brodie-character-kit/main/AGE
       <div class="sw"><div class="chip" style="background:var(--ink);border-bottom:1px solid var(--line)"></div><div class="meta"><span class="name">Ink</span><span class="hex">#1A1919</span><span class="use">Outline, brows, eyes, tank top.</span><span class="lab">near-black, warm</span></div></div>
       <div class="sw"><div class="chip" style="background:#FFFFFF"></div><div class="meta"><span class="name">Teeth white</span><span class="hex">#FFFFFF</span><span class="use">The grin. Also white props: chef hat, pillow, towel.</span><span class="lab">only inside an outline</span></div></div>
       <div class="sw"><div class="chip" style="background:var(--tan)"></div><div class="meta"><span class="name">Tan accent</span><span class="hex">#C2A882</span><span class="use">Speed marks, ground bars, wooden props. Never on his body.</span><span class="lab">from the tee print</span></div></div>
+    </div>
+    <div class="sec-head" style="margin-top:28px">
+      <span class="eyebrow">Around him</span>
+      <h3>getbrodie.com colours for everything that isn't Brodie</h3>
+      <p class="muted">Backgrounds, captions, buttons, profile rings. Volt is the one bright accent, always with black text on it. None of these go on his body.</p>
+    </div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:var(--volt)"></div><div class="meta"><span class="name">Volt</span><span class="hex">#D9FF3D</span><span class="use">Accent: CTAs, highlights, numerals, pfp ring. Black text on it.</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--bg);border-bottom:1px solid var(--line)"></div><div class="meta"><span class="name">Ground</span><span class="hex">#0A0A0B</span><span class="use">Default background for posts, banners, video end cards.</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--panel);border-bottom:1px solid var(--line);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)"></div><div class="meta"><span class="name">Panel</span><span class="hex">#1F2126</span><span class="use">Cards and caption bars on the ground.</span></div></div>
+      <div class="sw"><div class="chip" style="background:#8E9198"></div><div class="meta"><span class="name">Grey</span><span class="hex">#8E9198</span><span class="use">Secondary text. Headlines in Archivo, body in Plus Jakarta Sans.</span></div></div>
     </div>
     <div class="versus">
       <div class="v-cream"><span class="tag">Canon</span><span class="big">#EFE7DA</span><p>Bone. Reads warm against black, neutral against white. Red and green sit in balance (a* +0.5).</p></div>

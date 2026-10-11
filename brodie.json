@@ -78,5 +78,29 @@
     "macros-chef": "https://raw.githubusercontent.com/seraphimlabs-dev/brodie-character-kit/main/examples/macros-chef.png",
     "sleep-recovery": "https://raw.githubusercontent.com/seraphimlabs-dev/brodie-character-kit/main/examples/sleep-recovery.png",
     "cardio-runner": "https://raw.githubusercontent.com/seraphimlabs-dev/brodie-character-kit/main/examples/cardio-runner.png"
+  },
+  "brand": {
+    "source": "getbrodie.com",
+    "use": "everything around Brodie: backgrounds, captions, buttons, pfp rings; never on his body",
+    "volt": {
+      "hex": "#D9FF3D",
+      "use": "the one bright accent, black text on it"
+    },
+    "ground": {
+      "hex": "#0A0A0B",
+      "use": "default background"
+    },
+    "panel": {
+      "hex": "#1F2126",
+      "use": "cards and caption bars"
+    },
+    "grey": {
+      "hex": "#8E9198",
+      "use": "secondary text"
+    },
+    "fonts": {
+      "display": "Archivo 800, lowercase, tight tracking",
+      "body": "Plus Jakarta Sans"
+    }
   }
 }
